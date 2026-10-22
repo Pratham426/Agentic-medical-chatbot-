@@ -14,15 +14,15 @@ elif not ssl_cert:
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    GROQ_API_KEY:str = ''
-    TAVILY_API_KEY:str = ''
-    PINECONE_API_KEY:str = ''
-    PINECONE_INDEX:str = 'agenticmedibot'
-    GROQ_CHAT_MODEL:str = 'openai/gpt-oss-20b'
-    EMBED_MODEL:str = 'sentence-transformers/all-MiniLM-L6-v2'
-    GROQ_VISION_MODEL:str = 'qwen/qwen3.8-27b'
-    API_TOKEN:str = ''
-    ALLOWED_ORIGIN:str = 'http://localhost:8000,https://127.0.0.1:8000'
+    groq_api_key:str = ''
+    tavily_api_key:str = ''
+    pinecone_api_key:str = ''
+    pinecone_index:str = 'medibot-vectors'
+    groq_chat_model:str = 'openai/gpt-oss-20b'
+    embed_model:str = 'sentence-transformers/all-MiniLM-L6-v2'
+    groq_vision_model:str = 'qwen/qwen3.8-27b'
+    api_token:str = ''
+    allowed_origin:str = 'http://localhost:8000,https://127.0.0.1:8000'
     model_config = SettingsConfigDict(env_file='.env', extra='ignore')
 
 settings = Settings()
