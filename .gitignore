@@ -219,3 +219,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 Medibot/
+medical_memory.db
+medical_memory.db-*
+test_speech.wav

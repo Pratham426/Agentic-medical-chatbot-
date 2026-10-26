@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     embed_model:str = 'sentence-transformers/all-MiniLM-L6-v2'
     groq_vision_model:str = 'qwen/qwen3.8-27b'
     api_token:str = ''
-    allowed_origin:str = 'http://localhost:8000,https://127.0.0.1:8000'
+    allowed_origins: str = 'http://localhost:8000,https://127.0.0.1:8000'
     model_config = SettingsConfigDict(env_file='.env', extra='ignore')
 
 settings = Settings()
